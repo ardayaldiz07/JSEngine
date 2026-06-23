@@ -1,12 +1,14 @@
 import JsEngine from "./core/JSEngine.js";
 import GameObject from "./core/GameObject.js";
-
+class Ground{
+    
+}
 class Player extends GameObject {
     constructor(name, x, y, w, h, c, useGravity, useCollision) {
         super(name, x, y, w, h, c, useGravity, useCollision);
         
-        const speedX = 1 + Math.random() * 2;
-        const speedY = 1 + Math.random() * 2;
+        const speedX = 1 + Math.random() * 1.75;
+        const speedY = 1 + Math.random() * 1.75;
         this.velX = Math.random() > 0.5 ? speedX : -speedX; 
         this.velY = Math.random() > 0.5 ? speedY : -speedY;
     }
